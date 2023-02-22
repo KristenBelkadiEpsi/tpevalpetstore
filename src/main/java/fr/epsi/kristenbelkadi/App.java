@@ -170,7 +170,7 @@ public class App {
         if (petStore == null) {
             System.out.println("l'animalerie n'éxiste pas ");
         } else {
-            System.out.println(petStore.getAnimals());
+            petStore.getAnimals().forEach(System.out::println);
         }
 
         em.close();
