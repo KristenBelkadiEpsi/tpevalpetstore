@@ -16,6 +16,7 @@ import org.h2.tools.Server;
 
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -77,9 +78,9 @@ public class App {
         animal3.setCouleur("green");
         animal3.setPetStore(petStore3);
 
-        petStore1.setAnimals(new HashSet<>(Arrays.asList(animal1, animal3)));
+        petStore1.setAnimals(new HashSet<>(Arrays.asList(animal1)));
         petStore2.setAnimals(new HashSet<>(Arrays.asList(animal2)));
-
+        petStore3.setAnimals(new HashSet<>(Arrays.asList(animal3)));
 
         Product product1 = new Product();
         Product product2 = new Product();
@@ -99,6 +100,9 @@ public class App {
         product1.setCode("Code1");
         product2.setCode("Code2");
         product3.setCode("Code3");
+        product1.setPetStores(Collections.singleton(petStore1));
+        product2.setPetStores(Collections.singleton(petStore2));
+        product3.setPetStores(Collections.singleton(petStore3));
 
 
         Cat cat1 = new Cat();
