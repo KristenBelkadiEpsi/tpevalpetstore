@@ -28,7 +28,6 @@ public class App {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("tp-jpa-petstore");
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        System.out.println("Hello World!");
         // remplissage des tables
         Address address1 = new Address();
         Address address2 = new Address();
